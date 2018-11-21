@@ -1,0 +1,52 @@
+<%= form_with(model: me, local: true) do |form| %>
+  <% if me.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(me.errors.count, "error") %> prohibited this me from being saved:</h2>
+
+      <ul>
+      <% me.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :que_piensa_y_siente %>
+    <%= form.text_area :que_piensa_y_siente %>
+  </div>
+
+  <div class="field">
+    <%= form.label :que_ve %>
+    <%= form.text_area :que_ve %>
+  </div>
+
+  <div class="field">
+    <%= form.label :que_oye %>
+    <%= form.text_area :que_oye %>
+  </div>
+
+  <div class="field">
+    <%= form.label :que_dice_y_hace %>
+    <%= form.text_area :que_dice_y_hace %>
+  </div>
+
+  <div class="field">
+    <%= form.label :esfuerzos %>
+    <%= form.text_area :esfuerzos %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resultados %>
+    <%= form.text_area :resultados %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

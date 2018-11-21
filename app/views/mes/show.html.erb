@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Que piensa y siente:</strong>
+  <%= @me.que_piensa_y_siente %>
+</p>
+
+<p>
+  <strong>Que ve:</strong>
+  <%= @me.que_ve %>
+</p>
+
+<p>
+  <strong>Que oye:</strong>
+  <%= @me.que_oye %>
+</p>
+
+<p>
+  <strong>Que dice y hace:</strong>
+  <%= @me.que_dice_y_hace %>
+</p>
+
+<p>
+  <strong>Esfuerzos:</strong>
+  <%= @me.esfuerzos %>
+</p>
+
+<p>
+  <strong>Resultados:</strong>
+  <%= @me.resultados %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @me.user %>
+</p>
+
+<%= link_to 'Edit', edit_me_path(@me) %> |
+<%= link_to 'Back', mes_path %>
